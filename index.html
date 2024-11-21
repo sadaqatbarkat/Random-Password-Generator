@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
+  </head>
+  <body class="font-mono">
+    <div
+      id="parent"
+      class="flex flex-col justify-center items-center w-full min-h-screen bg-stone-100 p-4"
+    >
+      <div
+        id="child"
+        class="w-full max-w-lg lg:max-w-2xl shadow bg-white rounded-md px-6 lg:px-8 py-8"
+      >
+        <div class="flex flex-col items-center">
+          <div class="w-full flex items-center gap-2">
+            <input
+              type="text"
+              class="w-5/6 overflow-auto w-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent rounded p-2 text-sm"
+              placeholder="***********"
+            />
+           
+            <i class="fa-regular fa-eye text-gray-500"></i> 
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center mt-4">
+          <span class="text text-gray-600"></span>
+          <i class="fa-regular fa-copy text-gray-500"></i>
+        </div>
+
+        <div class="mt-4">
+          <input 
+           class="w-full accent-purple-500"
+            type="range"
+            class="w-full mt-2"
+            min="8"
+            max="100"
+            id="range"
+            value="8"
+            class="w-full mt-2 accent-purple-400"
+          />
+        </div>
+
+        <div class="flex flex-wrap justify-between gap-4 mt-4">
+          <div>
+            <label for="" class="text-sm text-gray-600" id="lengthValue"
+              >Password length:</label
+            >
+          </div>
+          <div>
+            <label class="ps-2 text-gray-600">
+              <input type="checkbox" name="checkboxes" value="AZ" />
+              UpperCase
+            </label>
+            <label class="ps-2 text-gray-600">
+              <input type="checkbox" name="checkboxes" value="az" />
+              LowerCase
+            </label>
+            <label class="ps-2 text-gray-600">
+              <input type="checkbox" name="checkboxes" value="09" />
+              Number
+            </label>
+            <label class="ps-2 text-gray-600">
+              <input type="checkbox" name="checkboxes" value="!@#" />
+            Symbols
+            </label>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <button
+        
+          class="w-full text-white bg-purple-500 hover:bg-purple-600 font-medium rounded-lg text-md px-5 py-2.5 transition duration-300"
+          id="generatePasswordBtn"
+        >
+          Generate Random Password
+        </button>
+        
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>

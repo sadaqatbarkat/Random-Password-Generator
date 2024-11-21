@@ -1,0 +1,14 @@
+.fa-eye,.fa-eye-slash{
+	margin-left: -30px !important;
+	/* padding-top: 13px; */
+	
+}
+
+i,input[type=range]{
+	cursor: pointer;
+}
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+  }
